@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Adaptive E-Commerce Demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="theme-light layout-spacious">
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="#home" class="logo">
+        <span class="logo-mark">EA</span>
+        <span class="logo-text">E-Accessories</span>
+      </a>
+
+      <nav class="main-nav">
+        <a href="#home" id="nav-home">Home</a>
+
+        <div class="nav-item nav-has-dropdown">
+          <button class="nav-link" id="nav-catalogue" type="button">Catalogue ▾</button>
+          <div class="nav-dropdown">
+            <a href="#catalogue">See all items</a>
+            <a href="#category:Computers">Computers</a>
+            <a href="#category:Audio">Audio</a>
+            <a href="#category:Phones">Phones</a>
+            <a href="#category:Cameras">Cameras</a>
+            <a href="#category:Gaming">Gaming</a>
+            <a href="#category:Home">Home & lighting</a>
+            <a href="#category:Accessories">Accessories</a>
+            <a href="#category:Wearables">Wearables</a>
+            <a href="#category:Displays">Monitors & displays</a>
+          </div>
+        </div>
+
+        <button class="nav-link" id="open-search" type="button">Search</button>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn" id="cart-open" aria-label="Open cart">
+          🛒 <span id="cart-count" class="cart-count">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ANNOUNCEMENT BAR -->
+  <div
+    class="announce-bar"
+    id="announce-bar"
+    data-text="Items On Sale! Grab before they're gone"
+  >
+    <span>Items On Sale! Grab before they're gone</span>
+    <div class="marquee">
+      <span>Items On Sale! Grab before they're gone</span>
+      <span>Items On Sale! Grab before they're gone</span>
+      <span>Items On Sale! Grab before they're gone</span>
+    </div>
+  </div>
+
+  <!-- HOME VIEW -->
+  <div id="home-view">
+    <section class="hero" id="home">
+      <h1>Accessories E-Commerce Store</h1>
+      <p>
+        Various electronics and accessories at a reasonable price.
+        Explore our catalogue and find your next favourite gadget.
+      </p>
+      <button class="btn primary" id="scroll-to-products">Browse products</button>
+    </section>
+
+    <!-- Category scroller -->
+    <div class="category-scroller card-shell" aria-label="Categories">
+      <div class="categories">
+        <a href="#category:Computers" class="category-pill">
+          <img src="https://picsum.photos/seed/computers/80" alt="Computers" />
+          <span>Computers</span>
+        </a>
+        <a href="#category:Audio" class="category-pill">
+          <img src="https://picsum.photos/seed/audio/80" alt="Audio" />
+          <span>Audio</span>
+        </a>
+        <a href="#category:Phones" class="category-pill">
+          <img src="https://picsum.photos/seed/phones/80" alt="Phones" />
+          <span>Phones</span>
+        </a>
+        <a href="#category:Cameras" class="category-pill">
+          <img src="https://picsum.photos/seed/cameras/80" alt="Cameras" />
+          <span>Cameras</span>
+        </a>
+        <a href="#category:Gaming" class="category-pill">
+          <img src="https://picsum.photos/seed/gaming/80" alt="Gaming" />
+          <span>Gaming</span>
+        </a>
+        <a href="#category:Home" class="category-pill">
+          <img src="https://picsum.photos/seed/home/80" alt="Home and lighting" />
+          <span>Home & lighting</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Featured carousel -->
+    <section class="home-previews card-shell catalogue-section">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">Featured products</h2>
+          <div class="section-subtitle">
+            Quick previews — click to open product details.
+          </div>
+        </div>
+        <div class="section-controls">
+          <a href="#catalogue" class="btn ghost">View all</a>
+        </div>
+      </div>
+
+      <div class="carousel">
+        <button
+          id="carousel-prev"
+          class="carousel-btn btn ghost"
+          aria-label="Previous slide"
+          type="button"
+        >
+          ◀
+        </button>
+
+        <div class="carousel-viewport">
+          <div class="carousel-track">
+            <a href="#product:p1" class="product-card carousel-slide">
+              <img
+                class="product-image"
+                src="https://images.pexels.com/photos/373945/pexels-photo-373945.jpeg?auto=compress&cs=tinysrgb&w=800"
+                alt="Noise-Canceling Headphones"
+              />
+              <h3 class="product-title">Noise-Canceling Headphones</h3>
+              <p class="product-desc small-hint">
+                Great for focus while the layout reconfigures itself.
+              </p>
+              <div class="product-footer">
+                <span class="price">€129.00</span>
+                <button class="btn small" type="button">View</button>
+              </div>
+            </a>
+
+            <a href="#product:p4" class="product-card carousel-slide">
+              <img
+                class="product-image"
+                src="https://images.pexels.com/photos/47261/pexels-photo-47261.jpeg?auto=compress&cs=tinysrgb&w=800"
+                alt="OLED Smartphone"
+              />
+              <h3 class="product-title">OLED Smartphone</h3>
+              <p class="product-desc small-hint">
+                Dark UI looks stunning on this screen.
+              </p>
+              <div class="product-footer">
+                <span class="price">€699.00</span>
+                <button class="btn small" type="button">View</button>
+              </div>
+            </a>
+
+            <a href="#product:p6" class="product-card carousel-slide">
+              <img
+                class="product-image"
+                src="https://images.pexels.com/photos/789822/pexels-photo-789822.jpeg?auto=compress&cs=tinysrgb&w=800"
+                alt="Ultralight Laptop"
+              />
+              <h3 class="product-title">Ultralight Laptop</h3>
+              <p class="product-desc small-hint">
+                Test responsive layouts from anywhere.
+              </p>
+              <div class="product-footer">
+                <span class="price">€999.00</span>
+                <button class="btn small" type="button">View</button>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="carousel-controls-right">
+          <button
+            id="carousel-toggle"
+            class="carousel-btn btn ghost"
+            aria-pressed="false"
+            aria-label="Toggle autoplay"
+            title="Toggle autoplay"
+            type="button"
+          >
+            ▶
+          </button>
+          <button
+            id="carousel-next"
+            class="carousel-btn btn ghost"
+            aria-label="Next slide"
+            type="button"
+          >
+            ▶
+          </button>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- SEARCH -->
+  <section class="search-section hidden" id="search-section">
+    <input
+      type="text"
+      id="search-input"
+      placeholder="Search products live…"
+      autocomplete="off"
+    />
+  </section>
+
+  <!-- CATALOGUE + FILTERS -->
+  <div class="catalogue-layout" id="catalogue">
+    <aside class="filters" id="filters" aria-hidden="false">
+      <h3>Filters</h3>
+
+      <div class="filter-group">
+        <label for="filter-category">Category</label>
+        <select id="filter-category">
+          <option value="any">All categories</option>
+          <option value="Computers">Computers</option>
+          <option value="Audio">Audio</option>
+          <option value="Phones">Phones</option>
+          <option value="Cameras">Cameras</option>
+          <option value="Gaming">Gaming</option>
+          <option value="Home">Home & lighting</option>
+          <option value="Accessories">Accessories</option>
+          <option value="Wearables">Wearables</option>
+          <option value="Displays">Monitors & displays</option>
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <label for="filter-power">Power source</label>
+        <select id="filter-power">
+          <option value="any">Any</option>
+          <option value="electric">Electric</option>
+          <option value="battery">Battery</option>
+          <option value="manual">Manual</option>
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <label for="filter-price">Price</label>
+        <select id="filter-price">
+          <option value="any">Any</option>
+          <option value="under-50">Under €50</option>
+          <option value="50-200">€50 – €200</option>
+          <option value="200-plus">€200+</option>
+        </select>
+      </div>
+
+      <div class="filter-actions">
+        <button class="btn ghost" id="filters-reset" type="button">
+          Reset
+        </button>
+      </div>
+    </aside>
+
+    <main id="app" aria-live="polite">
+      <!-- JS injects catalogue here -->
+    </main>
+  </div>
+
+  <!-- CART OVERLAY -->
+  <div id="cart-overlay" class="cart-overlay hidden" aria-hidden="true">
+    <div class="cart-content card-shell">
+      <button class="cart-close" id="cart-close" aria-label="Close cart">
+        ✕
+      </button>
+      <h2>Your cart</h2>
+
+      <div id="cart-items" class="cart-items"></div>
+
+      <div class="cart-footer">
+        <div class="cart-total-row">
+          <span>Total</span>
+          <strong id="cart-total">€0.00</strong>
+        </div>
+        <div class="cart-actions">
+          <button class="btn ghost" id="cart-clear" type="button">
+            Clear
+          </button>
+          <button class="btn primary" id="cart-checkout" type="button" disabled>
+            Checkout
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONFIG DASHBOARD -->
+  <button
+    id="config-toggle"
+    class="config-toggle-btn"
+    aria-label="Open UI configuration panel"
+    type="button"
+  >
+    ⚙
+  </button>
+
+  <aside
+    id="config-drawer"
+    class="config-drawer hidden"
+    aria-hidden="true"
+  >
+    <div class="config-header">
+      <h3>UI config</h3>
+      <button
+        id="config-close"
+        class="btn ghost small"
+        aria-label="Close UI panel"
+        type="button"
+      >
+        ✕
+      </button>
+    </div>
+
+    <div class="config-section">
+      <p class="config-summary" id="config-summary">
+        Loading current configuration…
+      </p>
+    </div>
+
+    <div class="config-section">
+      <h4>Appearance</h4>
+      <div class="control-group">
+        <label for="cfg-theme">Theme</label>
+        <select id="cfg-theme">
+          <option value="theme-light">Light</option>
+          <option value="theme-dark">Dark</option>
+          <option value="theme-colorful">Colorful</option>
+        </select>
+      </div>
+
+      <div class="control-group">
+        <label for="cfg-density">Density</label>
+        <select id="cfg-density">
+          <option value="layout-spacious">Spacious</option>
+          <option value="layout-compact">Compact</option>
+        </select>
+      </div>
+
+      <div class="control-group">
+        <label for="cfg-columns">Max columns</label>
+        <select id="cfg-columns">
+          <option value="2">2</option>
+          <option value="3">3</option>
+        </select>
+        <p class="small-hint" id="cfg-columns-hint"></p>
+      </div>
+
+      <label class="inline-checkbox">
+        <input type="checkbox" id="cfg-reading" />
+        <span>Reading mode (single column)</span>
+      </label>
+
+      <label class="inline-checkbox">
+        <input type="checkbox" id="cfg-dyslexic" />
+        <span>Readable font</span>
+      </label>
+
+      <label class="inline-checkbox">
+        <input type="checkbox" id="cfg-cursor" />
+        <span>Highlight cursor (inverted ring)</span>
+      </label>
+    </div>
+
+    <div class="config-section">
+      <h4>Onboarding</h4>
+      <p class="small-hint">
+        Presets lock rows/columns. Switch to “Custom” in the popup to unlock.
+      </p>
+      <button
+        class="btn ghost small"
+        id="cfg-open-onboarding"
+        type="button"
+      >
+        Re-open preset popup
+      </button>
+    </div>
+
+    <div class="config-actions">
+      <button class="btn primary" id="cfg-apply" type="button">
+        Apply changes
+      </button>
+    </div>
+  </aside>
+
+  <!-- ONBOARDING POPUP -->
+  <div
+    id="onboarding-backdrop"
+    class="onboarding-backdrop"
+    aria-modal="true"
+    role="dialog"
+  >
+    <form id="onboarding-form" class="onboarding-modal">
+      <div class="onboarding-main">
+        <h2>Quick setup</h2>
+        <p class="onboarding-intro">
+          Choose how the shop should behave. Presets lock layout rows/columns.
+          You can still tweak things later from the side panel.
+        </p>
+
+        <div class="preset-grid">
+          <label class="preset-card">
+            <input
+              type="radio"
+              name="preset"
+              value="focus"
+              checked
+            />
+            <div class="preset-body">
+              <h3>Focus mode</h3>
+              <p>Dark, 2 columns, search + content in the spotlight.</p>
+            </div>
+          </label>
+
+          <label class="preset-card">
+            <input type="radio" name="preset" value="grid" />
+            <div class="preset-body">
+              <h3>Grid view</h3>
+              <p>Emphasise product tiles in a 3-column grid.</p>
+            </div>
+          </label>
+
+          <label class="preset-card">
+            <input type="radio" name="preset" value="minimal" />
+            <div class="preset-body">
+              <h3>Minimal</h3>
+              <p>Calm single-column list, no autoplay, no announcement bar.</p>
+            </div>
+          </label>
+
+          <label class="preset-card">
+            <input type="radio" name="preset" value="colorful" />
+            <div class="preset-body">
+              <h3>Colorful</h3>
+              <p>
+                Bright gradient background, vivid cards, lively carousel.
+              </p>
+            </div>
+          </label>
+
+          <label class="preset-card">
+            <input type="radio" name="preset" value="calm" />
+            <div class="preset-body">
+              <h3>Low-motion</h3>
+              <p>Gentle dark theme, reduced animation, no autoplay.</p>
+            </div>
+          </label>
+
+          <label class="preset-card">
+            <input type="radio" name="preset" value="touch" />
+            <div class="preset-body">
+              <h3>Touch friendly</h3>
+              <p>Bigger buttons, 2 chunky columns, extra spacing.</p>
+            </div>
+          </label>
+
+          <label class="preset-card">
+            <input type="radio" name="preset" value="power" />
+            <div class="preset-body">
+              <h3>Power shopper</h3>
+              <p>Dense grid, 3 columns, price-forward layout.</p>
+            </div>
+          </label>
+
+          <label class="preset-card">
+            <input type="radio" name="preset" value="senior" />
+            <div class="preset-body">
+              <h3>Big & clear</h3>
+              <p>Large text, high contrast, low motion, 2 columns.</p>
+            </div>
+          </label>
+
+          <label class="preset-card">
+            <input type="radio" name="preset" value="retail" />
+            <div class="preset-body">
+              <h3>Retail demo</h3>
+              <p>Bold colors, animated banner, carousel always moving.</p>
+            </div>
+          </label>
+
+          <label class="preset-card">
+            <input type="radio" name="preset" value="mono" />
+            <div class="preset-body">
+              <h3>High contrast</h3>
+              <p>Monochrome, strong outlines, clear filters & panel.</p>
+            </div>
+          </label>
+
+          <label class="preset-card">
+            <input type="radio" name="preset" value="custom" />
+            <div class="preset-body">
+              <h3>Custom</h3>
+              <p>
+                Don’t lock anything. I’ll tweak theme and layout myself.
+              </p>
+            </div>
+          </label>
+        </div>
+
+        <div class="onboarding-preferences">
+          <label class="inline-checkbox">
+            <input type="checkbox" id="onboarding-reading" />
+            <span>I prefer a reading-style layout</span>
+          </label>
+          <label class="inline-checkbox">
+            <input type="checkbox" id="onboarding-dyslexic" />
+            <span>Use a more readable font</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="onboarding-footer">
+        <button
+          type="button"
+          class="btn ghost small"
+          id="onboarding-skip"
+        >
+          Skip
+        </button>
+        <button
+          type="button"
+          class="btn primary"
+          id="onboarding-start"
+        >
+          Start shopping
+        </button>
+      </div>
+    </form>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-column">
+        <h4>About</h4>
+        <p>
+          Adaptive Accessories is a demo shop that focuses on UI
+          personalisation, not user tracking. Settings are kept only for
+          this session.
+        </p>
+      </div>
+
+      <div class="footer-column">
+        <h4>Contact</h4>
+        <p>Email: hello@example.com</p>
+        <p>Phone: +00 123 456 789</p>
+        <p>Careers: jobs@example.com</p>
+      </div>
+
+      <div class="footer-column">
+        <h4>Location</h4>
+        <p>123 Demo Street, UI City</p>
+        <p class="small-hint">
+          For maps: search for “Adaptive Accessories Demo” in your map
+          app and follow walking directions from the nearest station.
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Adaptive Accessories</span>
+      <span>All layouts are client-side and session-only.</span>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
