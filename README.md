@@ -5,3 +5,5 @@ The application is developed using HTML, CSS, and vanilla JavaScript, with all a
 To evaluate the design, a survey-based study was conducted where users rated the UI presets based on purpose clarity, navigation, and overall satisfaction using a 1–10 scale. The results were visualised through graphs and analysed to identify trends in user preference and perceived usability.
 
 The project serves as a proof-of-concept for privacy-first adaptive UI design, showing that meaningful interface adaptation is possible without tracking, profiling, or machine-learning models. It is intended for educational and research purposes, particularly within human–computer interaction, usability engineering, and ethical UX design.
+
+Live link : https://niloy-5990.github.io/Adaptive-UI/
